@@ -1,0 +1,164 @@
+html {
+  color: #506078;
+  background-color: #fcbb99;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #506078;
+  font-weight: bold;
+
+  &:visited {
+    color: #506078;
+  }
+}
+
+.recordButton {
+  $size: 10vmin;
+  width: $size;
+  height: $size;
+  padding: 2vmin;
+  border: 0.5vmin solid #506078;
+  border-radius: 50%;
+}
+
+
+.button {
+  font-size: 1.5vmin;
+  font-weight: bold;
+  border: 0.3vmin solid #506078;
+  border-radius: 5px;
+  background: transparent;
+  color: #506078;
+  padding: 0.5vmin 1vmin;
+  user-select: none;
+}
+
+.clickable {
+  &:hover {
+    filter: opacity(75%);
+    cursor: pointer;
+  }
+}
+
+.App {
+  text-align: center;
+  position: relative;
+
+  .App-body {
+    background-image: linear-gradient(#FBA1B3, #FCBB99);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    .stats {
+      color: #506078;
+      font-size: 1rem;
+      margin-bottom: 2vmin;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .randomButton {
+      height: 5vmin;
+      margin-bottom: 3vmin;
+    }
+
+    .playButton {
+      height: 6vmin;
+      display: block;
+      margin-top: 3vmin;
+
+      &.disabled {
+        visibility: hidden;
+      }
+    }
+
+    .editButton {
+      margin-top: 3vmin;
+      height: 3vmin;
+    }
+  }
+}
+
+.twisters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8vmin;
+}
+
+.twister {
+  font-size: 2rem;
+}
+
+.twisterButton {
+  font-size: 6vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3vmin;
+  user-select: none;
+
+  &.disabled {
+    visibility: hidden;
+  }
+}
+
+.recordingPart {
+  display: flex;
+}
+
+.settings {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .panel {
+    background-color: #ffe1da;
+    border-radius: 15px;
+    border: 1px solid rgba(80, 96, 120, 0.13);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1vmin 2vmin;
+  }
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  left: auto;
+  right: 0;
+  bottom: 3px;
+  font-size: 0.75rem;
+  padding-bottom: 5px;
+  text-align: end;
+  padding-right: 10px;
+
+  .keyboardShortcutsWrapper {
+    @media only screen and (max-device-width: 640px) {
+      display: none;
+    }
+
+    .keyboardShortcuts {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
